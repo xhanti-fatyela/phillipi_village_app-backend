@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const cors = require('cors')
@@ -20,7 +21,7 @@ const dbConfig = require("./app/config/db.config");
 const Role = db.role;
 
 db.mongoose
-  .connect(db.url, {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
