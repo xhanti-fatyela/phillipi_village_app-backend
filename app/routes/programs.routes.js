@@ -15,9 +15,7 @@ module.exports = app => {
   
     let router = require("express").Router()
     
- router.get('/', (req, res) => {
-     res.json({messege: "Welcome to my backend app"});
- })
+ 
  
     router.post("/", [authJwt.verifyToken], programs.create)
  

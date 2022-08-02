@@ -83,9 +83,15 @@ db.mongoose
     })
    }
 
+  app.get('/', (req, res) => {
+    res.json({messege: "Welcome to my backend app"});
+})
+
   require("./app/routes/programs.routes")(app)
   require('./app/routes/auth.routes')(app);
   require('./app/routes/user.routes')(app);
+
+
 
 
 app.listen(app.get('port'), () => {
