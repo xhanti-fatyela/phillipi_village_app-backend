@@ -84,7 +84,7 @@ db.mongoose
    }
 
   app.get('/', (req, res) => {
-    res.json({messege: "Welcome to my backend app"});
+    res.send("<h2>Welcome to my backend app</h2>");
 })
 
   require("./app/routes/programs.routes")(app)
