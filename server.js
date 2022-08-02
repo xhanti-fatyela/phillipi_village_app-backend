@@ -3,11 +3,11 @@ const app = express();
 const cors = require('cors')
 
 
-let corsOptions = {
-    origin: "http://localhost:4200"
-}
+// let corsOptions = {
+//     origin: "http://localhost:4200"
+// }
 
-app.use(cors(corsOptions))
+app.use(cors())
 
 
 app.set('port', process.env.PORT || 3200)  
